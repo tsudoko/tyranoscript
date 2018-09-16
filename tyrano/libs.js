@@ -316,8 +316,8 @@
                 order_str = text;
                 callback(order_str);
             },
-            error:function(){
-                alert("file not found:"+file_path);
+            error:function(_, status, err){
+                alert(`loadFile: status ${status} err ${err}`);
                 callback("");
             }
         });
