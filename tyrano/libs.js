@@ -312,6 +312,7 @@
         $.ajax({
             url: file_path + "?" + Math.floor(Math.random() * 1000000),
             cache: false,
+            dataType: "text",
             success: function(text){
                 order_str = text;
                 callback(order_str);
