@@ -25,6 +25,8 @@ tyrano.base ={
     
     //画面サイズをぴったりさせます
     fitBaseSize:function(width,height){
+      	if(!$.isNWJS())
+      	    return;
        
         var that = this;
       	var view_width = $.getViewPort().width;
